@@ -1,27 +1,34 @@
 package com.example.challange40
 
-class Controller(var callBack: CallBack) {
-    fun checkPemenang(player1: String, player2: String, type: Boolean) {
-        var suit = mutableListOf("Batu","Gunting","Kertas")
-        val typePlayer = if (type) {
-            "Komputer"
-        } else {
-            "Player 2"
-        }
+import android.util.Log
 
-        if (player1 == suit[1] && player2 == suit[0] ||
-            player1 == suit[0] && player2 == suit[2] ||
+class Controller(var callBack: CallBack) {
+
+    fun checkPemenang(player1: String, type: Boolean) {
+        var suit = mutableListOf("Batu", "Gunting", "Kertas")
+        var player2 = suit.random()
+
+        Log.d("Pilihan 1", player1)
+        Log.d("Pilihan 2", player2)
+
+        if (player1 == suit[0] && player2 == suit[2] ||
+            player1 == suit[1] && player2 == suit[0] ||
             player1 == suit[2] && player2 == suit[1]
         ) {
-            callBack.resultSuit(hasil = "Player 2 Menang")
+            callBack.resultSuit(R.drawable.comwinner, player2)
+            Log.d("RESULT", "$player2 WIN ")
         } else if (
-            player1 == suit[1] && player2 == suit[2] ||
             player1 == suit[0] && player2 == suit[1] ||
-            player1 == suit[2] && player2 == suit[1]
+            player1 == suit[1] && player2 == suit[2] ||
+            player1 == suit[2] && player2 == suit[0]
         ) {
-            callBack.resultSuit(hasil = "Player 1 Menang")
+            callBack.resultSuit(R.drawable.pemainwinner, player2)
+            Log.d("RESULT", "$player1 WIN ")
+
         } else {
-            callBack.resultSuit(hasil = "Draw")
+            callBack.resultSuit(R.drawable.draw, player2)
+            Log.d("RESULT", "DRAW $player1 == $player2 ")
+
         }
     }
 }

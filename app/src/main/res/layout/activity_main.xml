@@ -103,7 +103,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/vs"/>
     <ImageView
-        android:id="@+id/repeat"
+        android:id="@+id/reset"
         app:layout_constraintTop_toBottomOf="@id/kertasCom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
