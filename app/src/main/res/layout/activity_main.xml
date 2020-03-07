@@ -37,25 +37,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/com"/>
+
     <ImageView
         android:id="@+id/batu"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pemain"
-        app:layout_constraintBottom_toTopOf="@id/gunting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
         android:contentDescription="0"
-        android:src="@drawable/batusuit"
-        />
+        android:src="@drawable/batu"
+        app:layout_constraintBottom_toTopOf="@id/gunting"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pemain" />
+
     <ImageView
         android:id="@+id/batuCom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/com"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
         android:contentDescription="0"
+        android:src="@drawable/batu"
         app:layout_constraintBottom_toTopOf="@id/guntingCom"
-        android:src="@drawable/batusuit"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/com" />
     <ImageView
         android:id="@+id/gunting"
         app:layout_constraintTop_toBottomOf="@id/batu"
@@ -64,7 +65,7 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:contentDescription="1"
-        android:src="@drawable/guntingpemain"/>
+        android:src="@drawable/gunting"/>
     <ImageView
         android:id="@+id/guntingCom"
         app:layout_constraintTop_toBottomOf="@id/batuCom"
@@ -73,7 +74,7 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:contentDescription="1"
-        android:src="@drawable/guntingpemain"/>
+        android:src="@drawable/gunting"/>
     <ImageView
         android:id="@+id/kertas"
         app:layout_constraintTop_toBottomOf="@id/pemain"
@@ -82,7 +83,7 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:contentDescription="2"
-        android:src="@drawable/kertaspemain"/>
+        android:src="@drawable/kertas"/>
     <ImageView
         android:id="@+id/kertasCom"
         app:layout_constraintTop_toBottomOf="@id/com"
@@ -91,7 +92,7 @@
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:contentDescription="2"
-        android:src="@drawable/kertaspemain"/>
+        android:src="@drawable/kertas"/>
 
     <ImageView
         android:id="@+id/versus"
@@ -102,12 +103,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/vs"/>
+
     <ImageView
         android:id="@+id/reset"
-        app:layout_constraintTop_toBottomOf="@id/kertasCom"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:src="@drawable/ulang"/>
+        android:layout_marginRight="44dp"
+        android:src="@drawable/ulang"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kertasCom"
+        app:layout_constraintVertical_bias="0.493" />
 </androidx.constraintlayout.widget.ConstraintLayout>
