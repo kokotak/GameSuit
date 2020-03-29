@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Challange4.0</string>
+    <string name="app_name">SUIT GAME</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_message">Hai, Masukkan nama kamu \n dulu ya...</string>
 </resources>

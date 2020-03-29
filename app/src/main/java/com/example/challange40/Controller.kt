@@ -4,12 +4,15 @@ import android.util.Log
 
 class Controller(var callBack: CallBack) {
 
-    fun checkPemenang(player1: String, type: Boolean) {
-        var suit = mutableListOf("Batu", "Gunting", "Kertas")
-        var player2 = suit.random()
 
-        Log.d("Pilihan 1", player1)
-        Log.d("Pilihan 2", player2)
+    fun checkPemenang(data: MutableList<String>) {
+        var suit = mutableListOf("Batu", "Gunting", "Kertas")
+
+        var player2Raw = data.find { it.contains("p2") }
+        var player1Raw = data.find { it.contains("p1") }
+        var player1 = player1Raw!!.replace("p1", "")
+        var player2 = player2Raw!!.replace("p2", "")
+
 
         if (player1 == suit[0] && player2 == suit[2] ||
             player1 == suit[1] && player2 == suit[0] ||
@@ -23,12 +26,11 @@ class Controller(var callBack: CallBack) {
             player1 == suit[2] && player2 == suit[0]
         ) {
             callBack.resultSuit(R.drawable.pemainwinner, player2)
-            Log.d("RESULT", "$player1 WIN ")
+            Log.d("RESULT", "$player1 WIN")
 
         } else {
             callBack.resultSuit(R.drawable.draw, player2)
             Log.d("RESULT", "DRAW $player1 == $player2 ")
-
         }
     }
 }
