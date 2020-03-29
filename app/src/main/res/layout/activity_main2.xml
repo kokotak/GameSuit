@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:src="@drawable/headergame"
+        app:layout_constraintBottom_toTopOf="@id/versus"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/pemain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pemainsuit"
+        app:layout_constraintBottom_toTopOf="@id/batuPlayer1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header" />
+
+    <ImageView
+        android:id="@+id/com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/com"
+        app:layout_constraintBottom_toTopOf="@id/batuPlayer2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header" />
+
+    <ImageView
+        android:id="@+id/batuPlayer1"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:contentDescription="0"
+        android:src="@drawable/batu"
+        app:layout_constraintBottom_toTopOf="@id/guntingPlayer1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pemain" />
+
+    <ImageView
+        android:id="@+id/batuPlayer2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:contentDescription="0"
+        android:src="@drawable/batu"
+        app:layout_constraintBottom_toTopOf="@id/guntingPlayer2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/com" />
+
+    <ImageView
+        android:id="@+id/guntingPlayer1"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:contentDescription="1"
+        android:src="@drawable/gunting"
+        app:layout_constraintBottom_toTopOf="@id/kertasPlayer1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/batuPlayer1" />
+
+    <ImageView
+        android:id="@+id/guntingPlayer2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:contentDescription="1"
+        android:src="@drawable/gunting"
+        app:layout_constraintBottom_toTopOf="@id/kertasPlayer2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/batuPlayer2" />
+
+    <ImageView
+        android:id="@+id/kertasPlayer1"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:contentDescription="2"
+        android:src="@drawable/kertas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pemain" />
+
+    <ImageView
+        android:id="@+id/kertasPlayer2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:contentDescription="2"
+        android:src="@drawable/kertas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/com" />
+
+    <ImageView
+        android:id="@+id/versus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/vs"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/reset"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginRight="44dp"
+        android:src="@drawable/ulang"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kertasPlayer2"
+        app:layout_constraintVertical_bias="0.493" />
+
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="72dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kertasPlayer1"
+        app:srcCompat="@drawable/homepage_icon" />
+
+    <ImageView
+        android:id="@+id/logout"
+        android:layout_width="42dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintStart_toEndOf="@+id/header"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logout_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
